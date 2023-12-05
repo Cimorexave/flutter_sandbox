@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/utils/mail.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.from(
           colorScheme: const ColorScheme(
             primary: Colors.blue, // A darker variant of the primary color
@@ -51,6 +53,17 @@ class App extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter SandBox'),
           backgroundColor: Theme.of(context).primaryColor,
+          actions: [
+            IconButton(
+                onPressed: () {
+                  sendEmail(
+                    email: 'sadeq.s502@gmail.com',
+                    subject: 'Hello World',
+                    body: 'This is a test email from Flutter app.',
+                  );
+                },
+                icon: const Icon(Icons.mail))
+          ],
         ),
         body: Column(
           children: [
