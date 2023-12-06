@@ -21,6 +21,10 @@ Future<void> sendEmail({
   }
 }
 
+Future<void> testMail() async {
+  await launchUrl(Uri.parse('mailto:example@example.com'));
+}
+
 String? encodeQueryParameters(Map<String, String> params) {
   return params.entries
       .map((e) =>
