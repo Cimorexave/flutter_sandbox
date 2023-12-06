@@ -56,11 +56,12 @@ class App extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () {
-                  sendEmail(
-                    email: 'sadeq.s502@gmail.com',
-                    subject: 'Hello World',
-                    body: 'This is a test email from Flutter app.',
-                  );
+                  testMail();
+                  // sendEmail(
+                  //   email: 'sadeq.s502@gmail.com',
+                  //   subject: 'Hello World',
+                  //   body: 'This is a test email from Flutter app.',
+                  // );
                 },
                 icon: const Icon(Icons.mail))
           ],
